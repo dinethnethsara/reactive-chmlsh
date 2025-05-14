@@ -1,0 +1,36 @@
+{
+  "name": "reactive-chmlsh",
+  "version": "0.1.0",
+  "description": "A React Native-like library for building cross-platform applications",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "babel src --out-dir lib",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "reactive",
+    "chmlsh",
+    "ui",
+    "cross-platform",
+    "mobile"
+  ],
+  "author": "Don PPPredrick College <don.pppredrick@example.com>",
+  "contributors": [
+    "Dineth Nethsara <dineth.nethsara@example.com>"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "jest": "^29.5.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  }
+}
