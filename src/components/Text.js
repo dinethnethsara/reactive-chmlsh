@@ -27,6 +27,10 @@ const Text = (props) => {
   let textOverflow = 'clip';
   let overflow = 'visible';
   let whiteSpace = 'normal';
+  let display;
+  let WebkitLineClamp;
+  let WebkitBoxOrient;
+  let direction;
   
   if (numberOfLines) {
     overflow = 'hidden';
@@ -34,9 +38,9 @@ const Text = (props) => {
     
     if (numberOfLines > 1) {
       whiteSpace = 'normal';
-      display: '-webkit-box';
-      WebkitLineClamp: numberOfLines;
-      WebkitBoxOrient: 'vertical';
+      display = '-webkit-box';
+      WebkitLineClamp = numberOfLines;
+      WebkitBoxOrient = 'vertical';
     }
     
     if (ellipsizeMode === 'head') {
@@ -53,7 +57,7 @@ const Text = (props) => {
   // Merge default styles with provided styles
   const mergedStyle = StyleSheet.flatten(
     defaultStyle,
-    { textOverflow, overflow, whiteSpace },
+    { textOverflow, overflow, whiteSpace, display, WebkitLineClamp, WebkitBoxOrient, direction },
     style
   );
   
